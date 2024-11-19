@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人网页首页</title>
+    <style>
+        /* 全局样式重置 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        /* 头部样式 */
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 18px;
+        }
+
+        /* 导航栏样式 */
+        nav {
+            background-color: #444;
+            padding: 10px;
+        }
+
+        nav ul {
+	list-style-type: none;
+	text-align: center;
+	color: #A0AC48;
+	font-size: 24px;
+        }
+
+        nav ul li {
+	display: inline-block;
+	margin-right: 20px;
+	font-size: 36px;
+	color: #7B761B;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #555;
+        }
+
+        /* 主体内容区域样式 */
+       .main-content {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+
+        /* 图片展示区域样式，这里以简单的图片网格布局为例，每行展示3张图 */
+       .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px;
+        }
+
+       .image-gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+       .image-gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        /* 个人简介区域样式 */
+       .profile-intro {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+       .profile-intro h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+       .profile-intro p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        /* 底部样式 */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>我的网页作业</h1>
+      <p>welcome to my website</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="../1shouye/shouye.html" target="new"><strong>首页</strong></a></li>
+            <li><a href="../2ziwojieshao/ziwojieshao.html" target="new"><strong>自我介绍</strong></a></li>
+            <li><a href="../3renshengganwu/人生感悟.html" target="new"><strong>人生感悟</strong></a></li>
+            <li><a href="../4xingquaihao/兴趣爱好.html" target="new"><strong>兴趣爱好</strong></a></li>
+          <li><a href="../5chouxianglezi/抽象乐子.html" target="new"><strong>抽象乐子</strong></a></li>
+        </ul>
+        <p>&nbsp;</p>
+        <ul>
+          <li></li>
+          <li><br>
+            <br>
+          </li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li>这是人生感悟 part</li>
+          <li></li>
+        </ul>
+      <p><br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+      </p>
+        <ul>
+          <li></li>
+          <li>人生如一场奇妙的旅行，我们不知道下一站会遇到什么，但我们可以怀揣着希望与勇气，带着对生活的敬畏之心，一路向前。就像王小波所描绘的那样，&ldquo;我不能选择怎么生，怎么死，但我能决定怎么爱，怎么活。这是我要的自由，我的黄金时代。&rdquo;</li>
+          <li><br>
+            <br>
+          <img src="../img/v2-32881b75f45bb568ab0b4b9b248b6c35_1440w.jpg" width="869" height="546" alt=""/>          </li>
+        </ul>
+        <p><br>
+          <br>
+          <br>
+          <br>
+        </p>
+        <ul>
+          <li>
+            <p>这个世界上好看的脸蛋太多，有趣的灵魂太少。而如王小波这般睿智、有趣、理性又特立独行的人，你很难遇上第二个。</p>
+            <p>1997年4月11日，王小波去世，至今已有27年，尽管王小波大概不喜欢这种无趣的纪念，但每逢这天，我们总是会有意无意的怀念起他。</p>
+            <p>&nbsp;</p>
+			  <p>你可以点击 <a href="https://baike.baidu.com/item/%E7%8E%8B%E5%B0%8F%E6%B3%A2/6673">https://baike.baidu.com/item/%E7%8E%8B%E5%B0%8F%E6%B3%A2/6673</a> 了解王小波生平。</a>
+              </li>
+        </ul>
+        <p><br>
+          <br>
+          <br>
+          <br>
+        </p>
+        <ul>
+          <li>part 1 学会珍惜当下</li>
+          <li>那一天我二十一岁，在我一生的黄金时代，我有好多奢望。我想爱，想吃，还想在一瞬间变成天上半明半暗的云。<br>
+            <br>
+            后来我才知道，生活就是个缓慢受锤的过程，人一天天老下去，奢望也一天天消逝，最后变得像挨了锤的牛一样。<br>
+            <br>
+          可是我过二十一岁生日时没有预见到这一点。我觉得自己会永远生猛下去，什么也锤不了我。-----《黄金时代》</li>
+          <li>现在的我们又何尝不是这样吗，我们感觉自己充满了力量，充满了冲劲，有欲与天公试比高的斗志，我们以为自己永远不会老去。可时间无情，总有一天我们会感觉到自己一天比一天的衰老，早上一照镜子便看到脸上爬满了皱纹。有人说现在青春是用来感受的，以后，青春是用来怀念的。珍惜现在看来遥遥无期，永远不会结束的青春年华，去爱，去闯，去成为想要的自己。或许这是王小波先生想告诉我们的。</li>
+          <li><img src="../img/v2-28d4d3720501afa406ad3d233ab5f5f7_1440w.jpg" width="1000" height="563" alt=""/></li>
+        </ul>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <ul>
+          <li></li>
+        </ul>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+      <p>&nbsp;</p>
+        <ul>
+          <li>part 2 诗意的活在当下</li>
+        </ul>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <ul>
+          <li>一个人只有今生今世是不够的,他还应当有诗意的世界。--《沉默的大多数》</li>
+          <li>满天都是星星，<br>
+          好像一场冻结了的大雨。--《黑铁时代》</li>
+          <li>行走在如今的社会，我们发现所有人似乎都是步履匆匆，每个人都好像低着头，走在自己的路上，没有人会抬着头，好好的感受这个世界。</li>
+          <li>毛姆的月亮与六便士中有这样一句脍炙人口的的句子，满地都是六便士，而他却看到了天上的月亮。现在的人们眼里又何尝不是充满了六便士，每个人讨论的总是收入，成绩，房车。却没有人记得人生下来是为了感受而非完成命定的任务。</li>
+          <li>所以，看看校园里入秋的梧桐树，在漫天的花海下感受生命的美好吧。</li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+        <p style="color: #A0AC48"><img src="../img/241031200128.jpg" width="600" height="938" alt=""/><img src="../img/v2-07514408fa4c3abc46cbba241b1fe237_1440w.jpg" width="900" height="950" alt=""/></p>
+        <p style="color: #A0AC48">&nbsp;</p>
+        <p style="color: #A0AC48">&nbsp;</p>
+        <p style="color: #A0AC48">&nbsp;</p>
+        <p style="color: #A0AC48">&nbsp;</p>
+        <p style="color: #A0AC48; font-size: 36px; text-align: center;">part 3 学会去爱别人</p>
+        <p style="color: #A0AC48; font-size: 36px; text-align: center;">我的勇气和你的勇气加起来，对付这个世界总够了吧?<br>
+          去向世界发出我们的声音，我一个人是不敢的，<br>
+        有了你，我就敢 。--《爱你就像爱生命》</p>
+      <p style="color: #A0AC48; font-size: 36px; text-align: center;">爱是唯一跨越时间的东西。--《星际穿越》</p>
+        <p style="color: #A0AC48; font-size: 36px; text-align: center;">一提到爱，或许大多数人脑海中最先出现的都是炽热而又令人向往的爱情，但爱并不是狭义的两情相悦，不是简单的儿女情长。爱能给予我们力量，给予我们去生活的力量。小时候，我们总是羞于对父母，对家人说我爱你，很多人终其一生都没有向父母表达自己对于他们的爱。在很多人的印象里，父亲一直是严厉，不善言辞，沉默的形象，他可能会在你做错事时打，骂。却又不善于去表达歉意。考上了大学我们会想去逃离他，想要去证明自己并不是那个不争气的小孩。可我们不知道的的是，父母并不需要我们证明自己有多优秀，他们需要的只不过是偶尔的一次电话，一次寒暄。</p>
+        <p style="color: #A0AC48; font-size: 36px; text-align: center;"><img src="../img/v2-933df7654a28fcdbc6f9c51c6c7af8a6_r.jpg" width="694" height="379" alt=""/></p>
+        <p style="color: #A0AC48; font-size: 36px; text-align: center;"><br>
+          <br>
+          <br>
+          <br>
+        </p>
+        <p style="color: #A0AC48">&nbsp;</p>
+        <p style="color: #A0AC48; text-align: center;"><iframe src="//player.bilibili.com/player.html?isOutside=true&aid=1952654241&bvid=BV1KC411j7w5&cid=1490311049&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>&nbsp;</p>
+        <p style="color: #A0AC48">&nbsp;</p>
+        <p style="color: #A0AC48">&nbsp;</p>
+        <p style="color: #A0AC48">&nbsp;</p>
+        <p style="color: #A0AC48"><br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+        </p>
+        <p>&nbsp;</p>
+        <p style="color: #257823">&nbsp;</p>
+        <p>&nbsp;</p>
+    </nav>
+    <div class="main-content">
+        <!-- 图片展示区域 -->
+        <div class="image-gallery"><!-- 你可以继续添加更多图片 -->
+        </div>
+        <!-- 个人简介区域 -->
+        <div class="profile-intro">
+            <h2>关于我</h2>
+            <p>这是一个很水的网页作业。</p>
+        </div>
+    </div>
+    <footer></footer>
+</body>
+
+</html>

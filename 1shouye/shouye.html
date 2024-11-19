@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人网页首页</title>
+    <style>
+        /* 全局样式重置 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        /* 头部样式 */
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 18px;
+        }
+
+        /* 导航栏样式 */
+        nav {
+            background-color: #444;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            text-align: center;
+        }
+
+        nav ul li {
+	display: inline-block;
+	margin-right: 20px;
+	font-size: 36px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #555;
+        }
+
+        /* 主体内容区域样式 */
+       .main-content {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+
+        /* 图片展示区域样式，这里以简单的图片网格布局为例，每行展示3张图 */
+       .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px;
+        }
+
+       .image-gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+       .image-gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        /* 个人简介区域样式 */
+       .profile-intro {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+       .profile-intro h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+       .profile-intro p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        /* 底部样式 */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+      <h1>我的网页作业</h1>
+      <p>welcome to my website</p>
+    </header>
+    <nav>
+      <ul>
+            <li><a href="shouye.html" target="new">首页</a></li>
+            <li><strong><a href="../2ziwojieshao/ziwojieshao.html" target="new">自我介绍</a></strong></li>
+        
+          <li><strong><a href="../3renshengganwu/人生感悟.html" target="new">人生感悟</a></strong></li>
+          <li><strong><a href="../4xingquaihao/兴趣爱好.html" target="new">兴趣爱好</a></strong></li>
+          <li><strong><a href="../5chouxianglezi/抽象乐子.html" target="new">抽象乐子</a></strong>（提供几个小游戏供你游玩）</li>
+          <li></li>
+        </ul>
+      <p><img src="../img/20200723114606_lvlhu.jpg" width="690" height="690" alt=""/><img src="../img/1-210606233605636.jpg" width="583" height="692" alt=""/>  <img src="../img/C6.gif" width="200" height="202" alt=""/></p>
+      <p><img src="../img/v2-e0d2a3e5abfcf00c24cc9ac096237831_720w.jpg" width="554" height="850" alt=""/><img src="../img/OIP-C.jpg" width="740" height="811" alt=""/></p>
+      <p><br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>射击游戏</title>
+    <style>
+        canvas {
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="shootingCanvas" width="400" height="400"></canvas>
+    <script>
+        // 画布和上下文
+        const canvas = document.getElementById('shootingCanvas');
+        const ctx = canvas.getContext('2d');
+        // 玩家位置
+        let player = { x: canvas.width / 2, y: canvas.height - 50 };
+        // 子弹数组
+        let bullets = [];
+        // 敌人数组
+        let enemies = [];
+        // 生成敌人的定时器
+        let enemyTimer;
+        // 玩家移动速度
+        let playerSpeed = 5;
+        // 子弹速度
+        let bulletSpeed = 10;
+        // 敌人速度
+        let enemySpeed = 2;
+        // 游戏得分
+        let score = 0;
+
+        function drawPlayer() {
+            ctx.fillStyle = 'blue';
+            ctx.fillRect(player.x, player.y, 50, 50);
+        }
+
+        function drawBullets() {
+            bullets.forEach(bullet => {
+                ctx.fillStyle = 'yellow';
+                ctx.fillRect(bullet.x, bullet.y, 5, 10);
+                bullet.y -= bulletSpeed;
+            });
+            // 移除超出画布范围的子弹
+            bullets = bullets.filter(bullet => bullet.y > 0);
+        }
+
+        function drawEnemies() {
+            enemies.forEach(enemy => {
+                ctx.fillStyle = 'red';
+                ctx.fillRect(enemy.x, enemy.y, 30, 30);
+                enemy.y += enemySpeed;
+                // 检查敌人是否超出画布范围
+                if (enemy.y > canvas.height) {
+                    // 将敌人从数组中移除
+                    enemies = enemies.filter(e => e!== enemy);
+                }
+            });
+        }
+
+        function updateScore() {
+            // 在画布上显示得分
+            ctx.font = '20px Arial';
+            ctx.fillStyle = 'black';
+            ctx.fillText('Score: ' + score, 10, 30);
+        }
+
+        function checkCollisions() {
+            enemies.forEach(enemy => {
+                bullets.forEach(bullet => {
+                    if (
+                        bullet.x >= enemy.x &&
+                        bullet.x <= enemy.x + 30 &&
+                        bullet.y <= enemy.y + 30 &&
+                        bullet.y >= enemy.y
+                    ) {
+                        // 子弹击中敌人，增加得分并移除敌人和子弹
+                        score++;
+                        enemies = enemies.filter(e => e!== enemy);
+                        bullets = bullets.filter(b => b!== bullet);
+                    }
+                });
+                // 检查玩家与敌人的碰撞
+                if (
+                    player.x < enemy.x + 30 &&
+                    player.x + 50 > enemy.x &&
+                    player.y < enemy.y + 30 &&
+                    player.y + 50 > enemy.y
+                ) {
+                    clearInterval(enemyTimer);
+                    alert('游戏结束！你的得分是：' + score);
+                }
+            });
+        }
+
+        document.addEventListener('mousemove', function (event) {
+            // 根据鼠标位置移动玩家
+            player.x = event.clientX - canvas.offsetLeft - 25;
+        });
+
+        document.addEventListener('click', function () {
+            // 点击鼠标发射子弹
+            const bullet = { x: player.x + 20, y: player.y };
+            bullets.push(bullet);
+        });
+
+        function startGame() {
+            // 生成敌人的定时器
+            enemyTimer = setInterval(function () {
+                const enemy = { x: Math.random() * (canvas.width - 30), y: -30 };
+                enemies.push(enemy);
+            }, 1000);
+        }
+
+        function gameLoop() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            drawPlayer();
+            drawBullets();
+            drawEnemies();
+            updateScore();
+            checkCollisions();
+        }
+
+        // 开始游戏
+        startGame();
+        setInterval(gameLoop, 30);
+    </script>
+</body>
+
+</html><br>
+      </p>
+    </nav>
+    <div class="main-content">
+        <!-- 图片展示区域 -->
+      
+        <!-- 个人简介区域 -->
+        <div class="profile-intro">
+            <h2>关于我</h2>
+          <p>这是个很水的网页</p>
+        </div>
+    </div>
+    <footer></footer>
+</body>
+
+</html>
